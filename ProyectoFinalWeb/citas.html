@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas</title>
+    <link rel="stylesheet" href="./general.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Citas Médicas</h1>
+    </header>
+    <div class="container">
+        <form id="citaForm">
+            <label for="fechaHora">Fecha y Hora de la Cita</label>
+            <input type="datetime-local" id="fechaHora" required>
+
+            <label for="especialidadCita">Especialidad Médica</label>
+            <select id="especialidadCita" required>
+                <!-- Opciones cargadas dinámicamente -->
+            </select>
+
+            <label for="medicoCita">Identificación del Médico</label>
+            <select id="medicoCita" required>
+                <!-- Opciones cargadas dinámicamente -->
+            </select>
+
+            <label for="estadoCita">Estado de la Cita</label>
+            <select id="estadoCita" required>
+                <option value="programada">Programada</option>
+                <option value="completada">Completada</option>
+                <option value="cancelada">Cancelada</option>
+            </select>
+
+            <label for="motivoConsulta">Motivo de la Consulta</label>
+            <textarea id="motivoConsulta" placeholder="Opcional: Describe el motivo"></textarea>
+
+            <button type="submit">Agendar Cita</button>
+        </form>
+        <div id="citaList">
+            <h3>Citas Programadas</h3>
+            <ul></ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./citas.js"></script>
+</body>
+</html>

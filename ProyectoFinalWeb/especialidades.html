@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Especialidades</title>
+    <link rel="stylesheet" href="./general.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Especialidades Médicas</h1>
+    </header>
+    <div class="container">
+        <form id="especialidadForm">
+            <label for="nombreEspecialidad">Nombre de la Especialidad</label>
+            <input type="text" id="nombreEspecialidad" placeholder="Ejemplo: Cardiología" required>
+
+            <label for="descripcionEspecialidad">Descripción</label>
+            <textarea id="descripcionEspecialidad" placeholder="Opcional: Breve descripción"></textarea>
+
+            <label for="estadoEspecialidad">Estado</label>
+            <select id="estadoEspecialidad" required>
+                <option value="activa">Activa</option>
+                <option value="inactiva">Inactiva</option>
+            </select>
+
+            <button type="submit">Registrar Especialidad</button>
+        </form>
+        <div id="especialidadList">
+            <h3>Especialidades Registradas</h3>
+            <ul></ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./especialidades.js"></script>
+</body>
+</html>

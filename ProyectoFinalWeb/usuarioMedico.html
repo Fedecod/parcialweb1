@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Médico</title>
+    <link rel="stylesheet" href="./PanelUsuarios.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Médico</h1>
+    </header>
+    <main class="container">
+        <!-- Sección de bienvenida -->
+        <section class="welcome-section">
+            <h2 id="welcomeMessage">Bienvenido</h2>
+            <p>Bienvenido a tu panel de control. Aquí puedes gestionar historiales médicos, comunicarte con tus pacientes y revisar tus citas agendadas.</p>
+        </section>
+
+        <!-- Accesos a funciones -->
+        <section class="doctor-links">
+            <h2>Acceso a Funciones</h2>
+            <div class="link-container">
+                <a href="./medicos.html" class="doctor-link">
+                    <div class="link-box">
+                        <h3>Actualizar Usuario</h3>
+                        <p>Actualiza tus datos personales.</p>
+                    </div>
+                </a>
+                <a href="./historiales.html" class="doctor-link">
+                    <div class="link-box">
+                        <h3>Historiales Médicos</h3>
+                        <p>Consulta y gestiona los historiales médicos de tus pacientes.</p>
+                    </div>
+                </a>
+                <a href="./PacientesRegistrados.html" class="doctor-link">
+                    <div class="link-box">
+                        <h3>Pacientes Registrados</h3>
+                        <p>Consulta el listado de pacientes asignados.</p>
+                    </div>
+                </a>
+                <a href="./comunicacion.html" class="doctor-link">
+                    <div class="link-box">
+                        <h3>Comunicación</h3>
+                        <p>Comunícate con tus pacientes para aclarar dudas.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de citas agendadas -->
+        <section class="appointments-section">
+            <h2>Citas Agendadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID de Cita</th>
+                        <th>Fecha y Hora</th>
+                        <th>Paciente</th>
+                        <th>Especialidad</th>
+                        <th>Motivo</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCitas">
+                    <!-- Las citas se cargarán dinámicamente aquí -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./usuarioMedico.js"></script>
+</body>
+</html>

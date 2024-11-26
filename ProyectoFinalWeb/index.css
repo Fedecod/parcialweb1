@@ -1,0 +1,96 @@
+body, h1, h2, h3, p, ul, ol, li, nav, a, section, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #0078d4;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffcc00;
+}
+
+/* Sección Hero */
+.hero {
+    text-align: center;
+    padding: 3em 1em;
+    background-color: #005a9e;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.hero .button {
+    background-color: #ffcc00;
+    color: #005a9e;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    margin: 0 0.5em;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .button:hover {
+    background-color: #e6b800;
+}
+
+/* Secciones Generales */
+.section {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #0078d4;
+}
+
+/* Footer */
+footer {
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

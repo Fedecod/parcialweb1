@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="./general.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Usuarios</h1>
+    </header>
+    <main class="container">
+        <form id="usuarioForm">
+            <label for="rolUsuario">Rol del Usuario</label>
+            <select id="rolUsuario" required>
+                <option value="" disabled selected>Seleccione un rol</option>
+                <option value="paciente">Paciente</option>
+                <option value="medico">Médico</option>
+            </select>
+
+            <div id="datosGenerales">
+                <label for="nombreUsuario">Nombre de Usuario</label>
+                <input type="text" id="nombreUsuario" placeholder="Nombre único" required>
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" placeholder="Mínimo 8 caracteres con mayúscula, número y símbolo" required>
+
+                <label for="estadoCuenta">Estado de la Cuenta</label>
+                <select id="estadoCuenta" required>
+                    <option value="activa">Activa</option>
+                    <option value="inactiva">Inactiva</option>
+                </select>
+            </div>
+
+            <!-- Campos específicos para pacientes -->
+            <div id="datosPaciente" style="display: none;">
+                <h3>Datos del Paciente</h3>
+                <label for="nombreCompletoPaciente">Nombre Completo</label>
+                <input type="text" id="nombreCompletoPaciente" placeholder="Nombre completo">
+
+                <label for="identificacionPaciente">Número de Identificación</label>
+                <input type="text" id="identificacionPaciente" placeholder="Identificación única">
+
+                <label for="fechaNacimientoPaciente">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNacimientoPaciente">
+
+                <label for="direccionPaciente">Dirección</label>
+                <input type="text" id="direccionPaciente" placeholder="Opcional">
+
+                <label for="telefonoPaciente">Teléfono de Contacto</label>
+                <input type="text" id="telefonoPaciente" placeholder="Solo números">
+
+                <label for="correoPaciente">Correo Electrónico</label>
+                <input type="email" id="correoPaciente" placeholder="Opcional">
+            </div>
+
+            <!-- Campos específicos para médicos -->
+            <div id="datosMedico" style="display: none;">
+                <h3>Datos del Médico</h3>
+                <label for="nombreCompletoMedico">Nombre Completo</label>
+                <input type="text" id="nombreCompletoMedico" placeholder="Nombre completo">
+
+                <label for="licenciaMedico">Número de Licencia Profesional</label>
+                <input type="text" id="licenciaMedico" placeholder="Licencia única">
+
+                <label for="especialidadMedico">Especialidad</label>
+                <select id="especialidadMedico">
+                    <option value="" disabled selected>Seleccione una especialidad</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Neurología">Neurología</option>
+                </select>
+
+                <label for="telefonoMedico">Teléfono de Contacto</label>
+                <input type="text" id="telefonoMedico" placeholder="Opcional">
+            </div>
+
+            <button type="submit">Registrar Usuario</button>
+        </form>
+
+        <!-- Tablas de usuarios -->
+        <h2>Usuarios Registrados</h2>
+        <h3>Pacientes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Identificación</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="tablaPacientes">
+                <!-- Los pacientes se cargarán dinámicamente aquí -->
+            </tbody>
+        </table>
+
+        <h3>Médicos</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Licencia</th>
+                    <th>Especialidad</th>
+                    <th>Teléfono</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="tablaMedicos">
+                <!-- Los médicos se cargarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./usuarios.js"></script>
+</body>
+</html>

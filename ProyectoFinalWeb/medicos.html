@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Médicos</title>
+    <link rel="stylesheet" href="./general.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Médicos</h1>
+    </header>
+    <div class="container">
+        <form id="medicoForm">
+            <label for="nombreMedico">Nombre Completo del Médico</label>
+            <input type="text" id="nombreMedico" placeholder="Nombre completo" required pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios">
+
+            <label for="licenciaProfesional">Número de Licencia Profesional</label>
+            <input type="text" id="licenciaProfesional" placeholder="Licencia profesional única" required>
+
+            <label for="especialidad">Especialidad</label>
+            <select id="especialidad" required>
+                <!-- Opciones cargadas dinámicamente -->
+            </select>
+
+            <label for="telefonoMedico">Teléfono de Contacto</label>
+            <input type="tel" id="telefonoMedico" placeholder="Número de contacto (opcional)" pattern="[0-9]+" title="Solo se permiten números">
+
+            <button type="submit">Registrar Médico</button>
+        </form>
+        <div id="medicoList">
+            <h3>Médicos Registrados</h3>
+            <ul></ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./medicos.js"></script>
+</body>
+</html>

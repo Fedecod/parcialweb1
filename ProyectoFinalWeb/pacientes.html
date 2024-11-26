@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Datos del Paciente</title>
+    <link rel="stylesheet" href="./general.css">
+</head>
+<body>
+    <header>
+        <h1>Actualizar Datos del Paciente</h1>
+    </header>
+    <main class="container">
+        <form id="pacienteForm">
+            <h2>Modificar Información</h2>
+            <label for="nombreCompleto">Nombre Completo</label>
+            <input type="text" id="nombreCompleto" placeholder="Nombre del paciente" required pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios">
+
+            <label for="numeroIdentificacion">Número de Identificación</label>
+            <input type="text" id="numeroIdentificacion" placeholder="ID único" readonly>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fechaNacimiento" required>
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" placeholder="Dirección del paciente (opcional)">
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" placeholder="Número de contacto" required pattern="[0-9]+" title="Solo se permiten números">
+
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" placeholder="ejemplo@correo.com">
+
+            <label for="estado">Estado del Perfil</label>
+            <select id="estado" required>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+
+            <button type="submit">Actualizar Datos</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./pacientes.js"></script>
+</body>
+</html>

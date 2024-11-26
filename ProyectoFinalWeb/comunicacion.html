@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación entre Usuarios</title>
+    <link rel="stylesheet" href="./general.css">
+</head>
+<body>
+    <header>
+        <h1>Comunicación entre Pacientes y Médicos</h1>
+    </header>
+    <div class="container">
+        <form id="mensajeForm">
+            <h2>Enviar Mensaje</h2>
+            <label for="remitente">Remitente</label>
+            <input type="text" id="remitente" readonly>
+
+            <label for="destinatario">Destinatario</label>
+            <select id="destinatario" required>
+                <option value="" disabled selected>Selecciona un destinatario</option>
+            </select>
+
+            <label for="contenidoMensaje">Contenido del Mensaje</label>
+            <textarea id="contenidoMensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <section id="mensajesRecibidos">
+            <h2>Mensajes Recibidos</h2>
+            <ul></ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./comunicacion.js"></script>
+</body>
+</html>

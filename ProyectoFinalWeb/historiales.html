@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Historiales Médicos</title>
+    <link rel="stylesheet" href="./general.css">
+</head>
+<body>
+    <header>
+        <h1>Seguimiento de Historiales Médicos</h1>
+    </header>
+    <div class="container">
+        <form id="historialForm">
+            <label for="pacienteId">Identificación del Paciente</label>
+            <input type="text" id="pacienteId" placeholder="ID del paciente" required>
+
+            <label for="fechaConsulta">Fecha de Consulta</label>
+            <input type="date" id="fechaConsulta" required>
+
+            <label for="diagnostico">Diagnóstico</label>
+            <textarea id="diagnostico" placeholder="Descripción del diagnóstico" required></textarea>
+
+            <label for="tratamiento">Tratamiento</label>
+            <textarea id="tratamiento" placeholder="Descripción del tratamiento"></textarea>
+
+            <label for="notasAdicionales">Notas Adicionales del Médico</label>
+            <textarea id="notasAdicionales" placeholder="Opcional: Notas adicionales"></textarea>
+
+            <label for="adjuntos">Adjuntar Archivos (PDF/JPG)</label>
+            <input type="file" id="adjuntos" accept=".pdf, .jpg, .jpeg">
+
+            <button type="submit">Guardar Historial</button>
+        </form>
+        <div id="historialList">
+            <h3>Historiales Registrados</h3>
+            <ul></ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Paciente360</p>
+    </footer>
+    <script src="./historiales.js"></script>
+</body>
+</html>
